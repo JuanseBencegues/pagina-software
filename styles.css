@@ -1,0 +1,22 @@
+/* PRINCIPAL */
+
+body{
+    background-color: grey;
+}
+.titulo{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    color: aliceblue;
+    display: block;
+    
+}
+.conteiner{
+    display: flex;
+    justify-content: center;
+}
+.conteiner img{
+    height: 300px;
+    width: auto;
+    padding: 10px;
+}
