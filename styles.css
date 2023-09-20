@@ -1,15 +1,26 @@
 /* PRINCIPAL */
-
+/* COLORES:
+    FONDO:#000514
+    PRINCIPAL: #0e827a (puede modif)
+    SECUNDARIO: #011146
+    TEXTO: #f0f3ff
+    ACENTO: #76ff04 */
 body{
-    background-color: grey;
+    background-color: #000514;
+}
+.info, .titulo{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #f0f3ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+strong{
+    color: #76ff04;
 }
 .titulo{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 800;
     font-size: 24px;
-    color: aliceblue;
-    display: block;
-    
 }
 .conteiner{
     display: flex;
