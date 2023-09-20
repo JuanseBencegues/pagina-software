@@ -8,19 +8,38 @@
 body{
     background-color: #000514;
 }
-.info, .titulo{
+.texto, .titulo, .subtitulo, .overlay{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #f0f3ff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    
 }
+
+h1, h2, p{
+    text-align: center;
+    display:block;
+}
+
+h1{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+p {
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
 strong{
     color: #76ff04;
 }
+
 .titulo{
     font-weight: 800;
     font-size: 24px;
+    
+}
+.subtitulo{
+    font-size: 15px;
+    
 }
 .conteiner{
     display: flex;
@@ -30,4 +49,58 @@ strong{
     height: 300px;
     width: auto;
     padding: 10px;
+}
+li{
+    margin-bottom: 10px;
+}
+
+   /*  ANIMACIONES */
+
+.link {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: filter 0.3s ease;
+    /* Animación suave de sombreado */
+}
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    /* Degradado de sombra */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: height 0.4s ease, opacity 0.4s ease;
+    /* Animación suave de altura y opacidad */
+    opacity: 0;
+    /* Inicialmente, la superposición es invisible */
+    overflow: hidden;
+}
+.text {
+    color: #fff;
+    /* Color del texto */
+    font-size: 18px;
+}
+.link:hover .image {
+    filter: brightness(0.5);
+    /* Sombreado de la imagen al pasar el cursor */
+}
+.link:hover .overlay {
+    height: 100%;
+    /* Hace que la superposición aparezca desde abajo hacia arriba */
+    opacity: 1;
+    /* Hace que la superposición aparezca al pasar el cursor */
+}
+.link a {
+    z-index: 1;
+    /* Asegura que el enlace sea accesible por encima de la imagen y la superposición */
 }
