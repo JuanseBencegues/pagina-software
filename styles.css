@@ -4,7 +4,9 @@
     PRINCIPAL: #0e827a (puede modif)
     SECUNDARIO: #011146
     TEXTO: #f0f3ff
-    ACENTO: #76ff04 */
+    ACENTO: #76ff04 VER¿DE
+    ACENTO: #6c5ee1 LILA
+    */
 body{
     background-color: #000514;
 }
@@ -27,9 +29,11 @@ p {
     margin-top: 35px;
     margin-bottom: 15px;
 }
-
+ul{
+    display: block;
+}
 strong{
-    color: #76ff04;
+    color: #6c5ee1;
 }
 
 .titulo{
@@ -39,7 +43,7 @@ strong{
 }
 .subtitulo{
     font-size: 15px;
-    
+    margin-bottom: 10px; 
 }
 .conteiner{
     display: flex;
@@ -53,6 +57,10 @@ strong{
 li{
     margin-bottom: 10px;
 }
+.list{
+    margin: 0;
+    padding-left: 20px;
+}
 
    /*  ANIMACIONES */
 
@@ -62,11 +70,17 @@ li{
     overflow: hidden;
 }
 .image {
+    /* Animación suave de sombreado */
     display: block;
     width: 100%;
     height: auto;
     transition: filter 0.3s ease;
-    /* Animación suave de sombreado */
+
+    /* Redondeo de imagenes */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 .overlay {
     position: absolute;
@@ -77,18 +91,24 @@ li{
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
     /* Degradado de sombra */
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     transition: height 0.4s ease, opacity 0.4s ease;
     /* Animación suave de altura y opacidad */
     opacity: 0;
     /* Inicialmente, la superposición es invisible */
     overflow: hidden;
 }
-.text {
+.texto {
     color: #fff;
-    /* Color del texto */
     font-size: 18px;
+
+}
+.texto p{
+    margin-bottom: 15px;
+    margin-top: 1px;
 }
 .link:hover .image {
     filter: brightness(0.5);
